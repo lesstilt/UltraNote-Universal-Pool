@@ -1,7 +1,7 @@
 cryptonote-universal-pool
 ====================
 
-High performance Node.js (with native C addons) mining pool for CryptoNote based coins such as Bytecoin, DuckNote, Monero, QuazarCoin, Boolberry, Dashcoin, etc..
+High performance Node.js (with native C addons) mining pool for CryptoNote based coins such as Bytecoin, UltraNote, Monero, QuazarCoin, Boolberry, Dashcoin, etc..
 Comes with lightweight example front-end script which uses the pool's AJAX API.
 
 
@@ -121,7 +121,7 @@ sudo apt-get install git redis-server libboost1.55-all-dev nodejs-dev nodejs-leg
 Clone the repository and run `npm update` for all the dependencies to be installed:
 
 ```bash
-git clone https://github.com/fancoder/cryptonote-universal-pool.git pool
+git clone https://github.com/UltraNote/cryptonote-universal-pool.git pool
 cd pool
 npm update
 ```
@@ -132,13 +132,13 @@ npm update
 Explanation for each field:
 ```javascript
 /* Used for storage in redis so multiple coins can share the same redis instance. */
-"coin": "ducknote",
+"coin": "ultranote",
 
 /* Used for front-end display */
-"symbol": "XDN",
+"symbol": "XUN",
 
 /* Minimum units in a single coin, see COIN constant in DAEMON_CODE/src/cryptonote_config.h */
-"coinUnits": 100000000,
+"coinUnits": 1000000,
 
 /* Coin network time to mine one block, see DIFFICULTY_TARGET constant in DAEMON_CODE/src/cryptonote_config.h */
 "coinDifficultyTarget": 240,
@@ -282,7 +282,7 @@ Explanation for each field:
 /* Coin daemon connection details. */
 "daemon": {
     "host": "127.0.0.1",
-    "port": 18081
+    "port": 31000
 },
 
 /* Wallet daemon connection details. */
