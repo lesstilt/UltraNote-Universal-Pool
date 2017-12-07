@@ -141,7 +141,7 @@ Explanation for each field:
 "coinUnits": 1000000,
 
 /* Coin network time to mine one block, see DIFFICULTY_TARGET constant in DAEMON_CODE/src/cryptonote_config.h */
-"coinDifficultyTarget": 240,
+"coinDifficultyTarget": 120,
 
 "logging": {
 
@@ -177,7 +177,7 @@ Explanation for each field:
     "clusterForks": "auto",
 
     /* Address where block rewards go, and miner payments come from. */
-    "poolAddress": "ddehi53dwGSBEXdhTYtga2R3fS4y9hRz4YHAsLABJpH75yUd5EDQmuL3yDBj1mG6MMeDfydY9vp4zFVVNQ99FTYq2PpsFJP2y"
+    "poolAddress": "Xun3RXLbPGDRsgPS6yN5jZ6fCUPTQsw1Z2yMs8bB8CYd9GNha81X2bt6P3aPYUx5ofcHUxsQbboFY1z7gMjfTumL2GjJtw28Vg"
 
     /* Poll RPC daemons for new blocks every this many milliseconds. */
     "blockRefreshInterval": 1000,
@@ -207,8 +207,8 @@ Explanation for each field:
        individual miners based on their hashrate in order to lower networking and CPU
        overhead. */
     "varDiff": {
-        "minDiff": 2, //Minimum difficulty
-        "maxDiff": 100000,
+        "minDiff": 100, //Minimum difficulty
+        "maxDiff": 200000,
         "targetTime": 100, //Try to get 1 share per this many seconds
         "retargetTime": 30, //Check to see if we should retarget every this many seconds
         "variancePercent": 30, //Allow time to very this % from target without retargeting
@@ -246,11 +246,11 @@ Explanation for each field:
     "enabled": true,
     "interval": 600, //how often to run in seconds
     "maxAddresses": 50, //split up payments if sending to more than this many addresses
-    "mixin": 3, //number of transactions yours is indistinguishable from
-    "transferFee": 5000000000, //fee to pay for each transaction
-    "minPayment": 100000000000, //miner balance required before sending payment
+    "mixin": 2, //number of transactions yours is indistinguishable from
+    "transferFee": 100000, //fee to pay for each transaction
+    "minPayment": 10000000, //miner balance required before sending payment
     "maxTransactionAmount": 0, //split transactions by this amount(to prevent "too big transaction" error)
-    "denomination": 100000000000 //truncate to this precision and store remainder
+    "denomination": 10000000 //truncate to this precision and store remainder
 },
 
 /* Module that monitors the submitted block maturities and manages rounds. Confirmed
@@ -262,7 +262,7 @@ Explanation for each field:
 
     /* Block depth required for a block to unlocked/mature. Found in daemon source as
        the variable CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW */
-    "depth": 60,
+    "depth": 10,
     "poolFee": 1.8, //1.8% pool fee (2% total fee total including donations)
     "devDonation": 0.1, //0.1% donation to send to pool dev - only works with Monero
     "coreDevDonation": 0.1 //0.1% donation to send to core devs - works with Bytecoin, Monero, Dashcoin, QuarazCoin, Fantoncoin, AEON and OneEvilCoin
